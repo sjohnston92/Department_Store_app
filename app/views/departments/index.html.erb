@@ -1,2 +1,24 @@
-<h1>Departments#index</h1>
-<p>Find me in app/views/departments/index.html.erb</p>
+<style>
+.body {
+  text-align:center
+}
+
+</style>
+<div class="body">
+<h1> This is our Department Store App </h1>
+
+
+ <%= link_to "Create a new department", new_department_path%>  
+
+<br>
+<br>
+<%  @departments.each do |department|%>
+<hr>
+<h2><%= link_to department.name, department%></h2>
+<br>
+<%= link_to "Delete Department", department, method: :delete %>
+
+  <%end%>
+</div>
+
+
